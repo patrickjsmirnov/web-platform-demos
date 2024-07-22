@@ -2,6 +2,11 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   transition: "all 0.3s ease";
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
 }
 
 .popover {
@@ -30,4 +35,17 @@
   &:focus-within {
     background-color: rgb(235, 208, 176);
   }
+}
+
+.dialog {
+  border: none;
+  border-radius: 16px;
+  width: 400px;
+  min-height: 200px;
+}
+
+.dialog-close-button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
 }
