@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  transition: "all 0.3s ease";
+  transition: all 0.3s ease;
 
   &::after,
   &::before {
@@ -9,10 +9,18 @@
   }
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
 .popover {
   &:popover-open {
     inset: unset;
     left: 8px;
+    top: 45px;
     background-color: lavender;
     border: none;
     padding: 16px;
@@ -32,7 +40,7 @@
     background-color: rgb(235, 208, 176);
   }
 
-  &:focus-within {
+  &:focus-visible {
     background-color: rgb(235, 208, 176);
   }
 }
@@ -48,4 +56,17 @@
   position: absolute;
   right: 16px;
   top: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.details-summary {
+  cursor: pointer;
 }

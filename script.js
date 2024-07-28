@@ -3,6 +3,7 @@
 const dialogButton = document.querySelector(".dialog-button");
 const dialog = document.querySelector(".dialog");
 const dialogCloseButton = document.querySelector(".dialog-close-button");
+const details = document.querySelector("details");
 
 dialogButton.addEventListener("click", () => {
   dialog.showModal();
@@ -10,4 +11,12 @@ dialogButton.addEventListener("click", () => {
 
 dialogCloseButton.addEventListener("click", () => {
   dialog.close();
+});
+
+details.addEventListener("toggle", (event) => {
+  if (details.open) {
+    console.log("open");
+  } else {
+    console.log("close");
+  }
 });
